@@ -15,7 +15,14 @@ class Circle: Shape {
         self.radius = radius
         super.init(color: color)
     }
-    
+}
+
+class Square: Shape {
+    var width: Int
+    init(width:Int, color:UIColor){
+        self.width = width
+        super.init(color: color)
+    }
 }
 
 var circle:Circle = Circle(radius: 5, color: UIColor.redColor());
