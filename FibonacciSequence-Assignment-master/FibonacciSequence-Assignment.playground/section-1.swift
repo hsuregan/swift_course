@@ -35,7 +35,8 @@ class FibonacciSequence {
                 seq.append(1)
             }
             else {
-                val = seq[i] + seq[i-1]
+                seq[i-1]
+                val = seq[i-1] + (includesZero ? seq[i] : seq[i-2])
                 seq.append(val)
             }
             
@@ -68,7 +69,7 @@ class FibonacciSequence {
             } else if (i == 1 && seq.count == 1) {
                 seq.append(1)
             } else {
-                seq.append(seq[i] + seq[i-1])
+                seq.append(seq[i-1] + (includesZero ? seq[i] : seq[i-2]))
             }
         
         }
@@ -81,4 +82,4 @@ class FibonacciSequence {
 
 let fibanocciSequence = FibonacciSequence(maxNumber:12345, includesZero: true)
 
-let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 13, includesZero: true)
+let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 13, includesZero: false)
