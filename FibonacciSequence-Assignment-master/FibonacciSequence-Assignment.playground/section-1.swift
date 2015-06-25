@@ -11,20 +11,20 @@ import UIKit
 class FibonacciSequence {
     
     let includesZero: Bool
-    let values: [Int]
+    let values: [UInt]
     
-    init(maxNumber: Int, includesZero: Bool) {
+    init(maxNumber: UInt, includesZero: Bool) {
         self.includesZero = includesZero
         
         //store fib sequenc into here before setting values
-        var seq = [Int]()
+        var seq = [UInt]()
         if(includesZero) {
             seq = [0];
         } else {
             seq = [];
         }
         
-        var val:Int = 0;
+        var val:UInt = 0;
         for var i:Int = 0; val < maxNumber; ++i {
             if(i == 0) {
                 val = 1;
@@ -47,13 +47,13 @@ class FibonacciSequence {
         //TODO: Create an array which contains the numbers in the Fibonacci sequence, but don't add any numbers to the array which exceed the maxNumber. For example, if the maxNumber is 10 then the array should contain [0,1,1,2,3,5,8] because the next number is 13 which is higher than the maxNumber. If includesZero is false then you should not include the number 0 in the sequence.
     }
     
-    init(numberOfItemsInSequence: Int, includesZero: Bool) {
+    init(numberOfItemsInSequence: UInt, includesZero: Bool) {
         self.includesZero = includesZero
         
         
         
         //store fib sequenc into here before setting values
-        var seq = [Int]()
+        var seq = [UInt]()
         if(includesZero) {
             seq = [0];
         } else {
@@ -61,7 +61,7 @@ class FibonacciSequence {
         }
         
         var val = 0;
-        for var i:Int = 0; i < numberOfItemsInSequence; i++ {
+        for var i:Int = 0; i < Int(numberOfItemsInSequence); i++ {
             if(i == 0 && seq.count == 0) {
                 seq.append(1)
             } else if (i == 0 && seq[0] == 0) {
@@ -69,7 +69,13 @@ class FibonacciSequence {
             } else if (i == 1 && seq.count == 1) {
                 seq.append(1)
             } else {
-                seq.append(seq[i-1] + (includesZero ? seq[i] : seq[i-2]))
+                let(sum, didOverFlow) = UInt.addWithOverflow(seq[i-1], (includesZero ? seq[i] : seq[i-2]))
+                if(didOverFlow == false) {
+                    seq.append(seq[i-1] + (includesZero ? seq[i] : seq[i-2]))
+                } else {
+                    println("The next number in the fib sequence will cause the program to crash :(")
+                    break
+                }
             }
         
         }
@@ -80,6 +86,18 @@ class FibonacciSequence {
     }
 }
 
+UInt.min
+UInt.max
+Int.min
+Int.max
+
+
 let fibanocciSequence = FibonacciSequence(maxNumber:12345, includesZero: true)
 
-let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 13, includesZero: false)
+let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 95, includesZero: false)
+
+UInt.addWithOverflow(UInt.max, UInt.max)
+let (sum, didOverflow) = UInt.addWithOverflow(UInt.max, UInt.max)
+sum
+didOverflow
+

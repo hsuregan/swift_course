@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>825CBB16-D9B4-44FF-89B3-421B38040D11</string>
+	<string>F507C189-BF73-4E62-B14E-730903128E35</string>
 	<key>IDESourceControlProjectName</key>
-	<string>FibonacciSequence-Assignment</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
 		<string>https://github.com/hsuregan/swift_course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FibonacciSequence-Assignment-master/FibonacciSequence-Assignment.playground</string>
+	<string>Grayscale Slider/Grayscale Slider.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/hsuregan/swift_course.git</string>
