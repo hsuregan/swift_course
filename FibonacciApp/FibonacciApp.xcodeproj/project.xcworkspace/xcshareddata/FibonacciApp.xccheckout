@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>825CBB16-D9B4-44FF-89B3-421B38040D11</string>
+	<string>129C561E-F04F-444E-BE4C-C0B469C8DF14</string>
 	<key>IDESourceControlProjectName</key>
-	<string>playground</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
 		<string>https://github.com/hsuregan/swift_course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FibonacciSequence-Assignment-master/FibonacciSequence-Assignment.playground/playground.xcworkspace</string>
+	<string>FibonacciApp/FibonacciApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
