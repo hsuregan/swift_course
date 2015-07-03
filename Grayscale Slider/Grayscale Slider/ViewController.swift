@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     @IBAction func sliderDidChangeValue(sender: UISlider) {
         println(sender.value)
         view.backgroundColor = UIColor(white: CGFloat(sender.value), alpha: 1)
-        
     }
+    
 
 }
 

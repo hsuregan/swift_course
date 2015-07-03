@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HiS-9a-L98">
-                                <rect key="frame" x="14" y="269" width="292" height="31"/>
+                                <rect key="frame" x="19" y="269" width="292" height="31"/>
                                 <connections>
                                     <action selector="sliderDidChangeValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="WPx-Fd-u4C"/>
                                 </connections>
