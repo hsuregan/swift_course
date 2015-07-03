@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         //Recall, in Swift, when passing stuff into a function, you must specify which argument it is arg1:x ...
         fibonacciSequence = FibonacciSequence(numberOfItemsInSequence:UInt(numberOfItemsSlider.value), includesZero:Bool(includesZeroSwitch.on));
-        numberOfItemsLabel.text = String(UInt(numberOfItemsSlider.value)); //modify contents of numberOfItems
+        numberOfItemsLabel.text = String(UInt(numberOfItemsSlider.value) + UInt(includesZeroSwitch.on)); //modify contents of numberOfItems
         textView.text = String(fibonacciSequence.values.description);
         includesZeroLabel.text = Bool(includesZeroSwitch.on) ? "YA" : "NO"; //why won't it update w "NO" ?
         
