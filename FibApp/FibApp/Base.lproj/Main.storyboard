@@ -83,6 +83,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="includesZeroLabel" destination="Ax0-hD-Xck" id="kUx-ej-vsY"/>
+                        <outlet property="includesZeroSwitch" destination="9jq-EC-gSI" id="QIr-oe-aV8"/>
+                        <outlet property="numberOfItemsLabel" destination="pXL-mL-CPE" id="BXC-Gc-n7s"/>
+                        <outlet property="numberOfItemsSlider" destination="Hk8-tI-UV2" id="44h-Ry-cUK"/>
+                        <outlet property="textView" destination="Msa-sj-6SU" id="iUF-Kf-OO7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

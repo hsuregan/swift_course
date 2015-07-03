@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>825CBB16-D9B4-44FF-89B3-421B38040D11</string>
 	<key>IDESourceControlProjectName</key>
-	<string>playground</string>
+	<string>FibonacciSequence-Assignment</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
 		<string>https://github.com/hsuregan/swift_course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FibonacciSequence-Assignment-master/FibonacciSequence-Assignment.playground/playground.xcworkspace</string>
+	<string>FibonacciSequence-Assignment-master/FibonacciSequence-Assignment.playground</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/hsuregan/swift_course.git</string>
