@@ -13,6 +13,15 @@ class FibonacciSequence {
     let includesZero: Bool
     let values: [UInt]
     
+    func overflow(nItems: UInt, includeZero: Bool) -> Bool {
+        
+        //can I do this? I forget...
+        var fibonacciSequence = FibonacciSequence(numberOfItemsInSequence:nItems, includesZero:includesZero);
+        
+        return false
+    }
+    
+    
     init(maxNumber: UInt, includesZero: Bool) {
         self.includesZero = includesZero
         
@@ -53,6 +62,7 @@ class FibonacciSequence {
         
         //store fib sequenc into here before setting values
         var seq = [UInt]()
+        //initialize array
         if(includesZero) {
             seq = [0];
         } else {
@@ -72,8 +82,11 @@ class FibonacciSequence {
                 if(didOverFlow == false) {
                     seq.append(seq[i-1] + (includesZero ? seq[i] : seq[i-2]))
                 } else {
+                    //appending signal 4 will indicate that overflow occured
+                    seq.append(4)
                     println("The next number in the fib sequence will cause the program to crash :(")
-                    break
+                    self.values = seq;
+                    return
                 }
             }
             
