@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F507C189-BF73-4E62-B14E-730903128E35</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Grayscale Slider</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
 		<string>https://github.com/hsuregan/swift_course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Grayscale Slider/Grayscale Slider.xcodeproj/project.xcworkspace</string>
+	<string>Grayscale Slider/Grayscale Slider.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
