@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     @IBOutlet weak var colorSquare: UIView!
     
+    
+
 
     //inheritance
     // like main()
@@ -21,11 +23,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //hard time getting this..
+        let defaults = NSUserDefaults.standardUserDefaults()
+        redSlider.value = defaults.floatForKey("red")
+        greenSlider.value = defaults.floatForKey("green")
+        blueSlider.value = defaults.floatForKey("blue")
+        
         // Do any additional setup after loading the view, typically from a nib.
         updateBackgroundColor()
         colorSquare.layer.borderColor = UIColor.blackColor().CGColor
         colorSquare.layer.borderWidth = 1
         
+        //explain whats happening more thoroughlly...
+
         
     }
 
@@ -56,6 +66,14 @@ class ViewController: UIViewController {
         
         //view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         colorSquare.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        
+        
+        //....what?
+        let defaults = NSUserDefaults.standardUserDefaults()  //1
+        defaults.setFloat(redSlider.value, forKey: "red")   //2
+        defaults.setFloat(greenSlider.value, forKey: "green")
+        defaults.setFloat(blueSlider.value, forKey: "green")
+        defaults.synchronize()    //3
 
     }
 
