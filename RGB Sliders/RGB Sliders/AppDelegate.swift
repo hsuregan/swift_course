@@ -8,6 +8,11 @@
 
 import UIKit
 
+//don't often work with this
+//google analytics , you'd probably register on func application
+//you can stick print statements
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -47,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fUl-aC-bu5" kind="show" id="DT1-y8-eY2"/>
+                                    <segue destination="fUl-aC-bu5" kind="show" identifier="openColor" id="DT1-y8-eY2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49" y="-330"/>
+            <point key="canvasLocation" x="-227" y="-198"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kIM-SU-Ob0">
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Jd-92-Gqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="-330"/>
+            <point key="canvasLocation" x="249" y="-208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gPt-2Z-cLc">

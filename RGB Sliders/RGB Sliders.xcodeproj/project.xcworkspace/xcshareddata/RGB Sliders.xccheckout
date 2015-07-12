@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1639BC95-81C5-4DCE-9534-4175457F4520</string>
 	<key>IDESourceControlProjectName</key>
-	<string>RGB Sliders</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
 		<string>https://github.com/hsuregan/swift_course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RGB Sliders/RGB Sliders.xcodeproj</string>
+	<string>RGB Sliders/RGB Sliders.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
