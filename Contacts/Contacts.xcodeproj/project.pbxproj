@@ -83,9 +83,9 @@
 			children = (
 				73D6C4031B586B9F0071A49E /* AppDelegate.swift */,
 				73D6C4051B586B9F0071A49E /* ViewController.swift */,
+				73D6C4271B58AAE50071A49E /* ContactsTableViewController.swift */,
 				73D6C4071B586B9F0071A49E /* Main.storyboard */,
 				73D6C4291B58B36A0071A49E /* Contact.swift */,
-				73D6C4271B58AAE50071A49E /* ContactsTableViewController.swift */,
 				73D6C40A1B586B9F0071A49E /* Images.xcassets */,
 				73D6C40C1B586B9F0071A49E /* LaunchScreen.xib */,
 				73D6C4011B586B9F0071A49E /* Supporting Files */,
@@ -417,6 +417,7 @@
 				73D6C41F1B586B9F0071A49E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73D6C4201B586B9F0071A49E /* Build configuration list for PBXNativeTarget "ContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				73D6C4221B586B9F0071A49E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

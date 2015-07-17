@@ -20,6 +20,7 @@ class ContactsTableViewController: UITableViewController {
 
     //how do I append an object to this array?
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,19 @@ class ContactsTableViewController: UITableViewController {
         cell.textLabel?.text = self.contacts[indexPath.row].name
 
         return cell
+    }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "openContact") {
+            //WHAT IS THIS DOING????
+            let newViewController = segue.destinationViewController as! ViewController
+            newViewController.phoneNumber = self.contacts[tableView.indexPathForSelectedRow()!.row].phoneNumber
+                //sender!.name
+            newViewController.name = self.contacts[tableView.indexPathForSelectedRow()!.row].name
+            
+        }
     }
     
 
