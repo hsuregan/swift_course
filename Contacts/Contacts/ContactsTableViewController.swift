@@ -9,6 +9,17 @@
 import UIKit
 
 class ContactsTableViewController: UITableViewController {
+    
+    var regan:Contact = Contact(name: "Regan", phoneNumber: "512-517-6805")
+    var christine:Contact = Contact(name: "Christine", phoneNumber: "512-968-9053")
+    var mom:Contact = Contact(name: "Mary", phoneNumber: "512-845-7404")
+    
+    var contacts:[Contact] = [Contact(name: "Regan", phoneNumber: "512-517-6805"),
+                            Contact(name: "Christine", phoneNumber: "512-968-9053"),
+                            Contact(name: "Mary", phoneNumber: "512-845-7404")]
+
+    //how do I append an object to this array?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +47,16 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 5
+        return contacts.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         // Configure the cell...
-        cell.textLabel?.text = "A fine example of a UITableViewCell."
+        cell.textLabel?.text = self.contacts[indexPath.row].name
 
         return cell
     }
