@@ -10,13 +10,9 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
-    var regan:Contact = Contact(name: "Regan", phoneNumber: "512-517-6805")
-    var christine:Contact = Contact(name: "Christine", phoneNumber: "512-968-9053")
-    var mom:Contact = Contact(name: "Mary", phoneNumber: "512-845-7404")
+
     
-    var contacts:[Contact] = [Contact(name: "Regan", phoneNumber: "512-517-6805"),
-                            Contact(name: "Christine", phoneNumber: "512-968-9053"),
-                            Contact(name: "Mary", phoneNumber: "512-845-7404")]
+    var contacts:[Contact]! = []
     
     var important:[Contact]! = []
 
@@ -35,11 +31,14 @@ class ContactsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        contacts.extend([regan, christine, mom])
+        let regan:Contact = Contact(name: "Regan", phoneNumber: "512-517-6805")
+        let christine:Contact = Contact(name: "Christine", phoneNumber: "512-968-9053")
+        let mom:Contact = Contact(name: "Mary", phoneNumber: "512-845-7404")
+        self.contacts.extend([regan, christine, mom])
         important.extend([regan, christine, mom])
         
-        //let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
-        //navigationItem.leftBarButtonItem = moveButton
+        let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
+        navigationItem.leftBarButtonItem = moveButton
         
         
 
@@ -78,8 +77,20 @@ class ContactsTableViewController: UITableViewController {
         
         //configure a cell, instantiate cells, if you wanna set the color, basically anything to do with how the cell looks
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        let contact = self.contacts[indexPath.row]
         // Configure the cell...
-        cell.textLabel?.text = self.contacts[indexPath.row].name
+        
+        cell.textLabel?.text = contact.name
+        NSLog(contact.name)
+        
+//        if let name = contact.name {
+//            cell.textLabel?.text = name
+//        } else {
+//            cell.textLabel?.text = "no name"
+//        }
+        
+        //cell.textLabel?.text = self.contacts[indexPath.row].name
 
         return cell
     }

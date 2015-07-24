@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //textField is a data Type UITextField 
     
     func textFieldDidEndEditing(textField: UITextField) {
+        NSLog("TEXTFIELDIDEDITING")
         if textField == self.nameLabel {
             self.name? = textField.text
             NSLog(self.name!);
@@ -32,6 +33,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.phoneNumberLabel.text = self.phoneNumber;
+        //self.nameLabel.text = self.name;
+        self.nameLabel.delegate = self
+        self.phoneNumberLabel.delegate = self
         //self.view.backgroundColor = UIColor.redColor()
         
         if let name = self.name {
@@ -41,10 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.phoneNumberLabel.text = phoneNumber
         }
         
-        //self.phoneNumberLabel.text = self.phoneNumber;
-        //self.nameLabel.text = self.name;
-        self.nameLabel.delegate = self
-        self.phoneNumberLabel.delegate = self
+
         NSLog("viewDidLoad")
 
         // Do any additional setup after loading the view, typically from a nib.
