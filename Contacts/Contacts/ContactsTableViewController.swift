@@ -14,8 +14,6 @@ class ContactsTableViewController: UITableViewController {
     
     var contacts:[Contact]! = []
     
-    var important:[Contact]! = []
-
     
     
     
@@ -35,7 +33,6 @@ class ContactsTableViewController: UITableViewController {
         let christine:Contact = Contact(name: "Christine", phoneNumber: "512-968-9053")
         let mom:Contact = Contact(name: "Mary", phoneNumber: "512-845-7404")
         self.contacts.extend([regan, christine, mom])
-        important.extend([regan, christine, mom])
         
         let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
         navigationItem.leftBarButtonItem = moveButton
@@ -81,14 +78,14 @@ class ContactsTableViewController: UITableViewController {
         let contact = self.contacts[indexPath.row]
         // Configure the cell...
         
-        cell.textLabel?.text = contact.name
-        NSLog(contact.name)
+//        cell.textLabel?.text = contact.name
+//        NSLog(contact.name!)
         
-//        if let name = contact.name {
-//            cell.textLabel?.text = name
-//        } else {
-//            cell.textLabel?.text = "no name"
-//        }
+        if let name = contact.name {
+            cell.textLabel?.text = name
+        } else {
+            cell.textLabel?.text = "no name"
+        }
         
         //cell.textLabel?.text = self.contacts[indexPath.row].name
 
@@ -100,10 +97,18 @@ class ContactsTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "openContact") {
             //destViewController returns an AnyObject
-            let newViewController = segue.destinationViewController as! ViewController //casting
-            newViewController.phoneNumber = self.contacts[tableView.indexPathForSelectedRow()!.row].phoneNumber
+            //let newViewController = segue.destinationViewController as! ViewController //casting
+            //newViewController.contact = self.contacts[tableView.indexPathForSelectedRow()!.row]
+            //NSLog("loading contact")
+            //newViewController.phoneNumber = self.contacts[tableView.indexPathForSelectedRow()!.row].phoneNumber
                 //sender!.name
-            newViewController.name = self.contacts[tableView.indexPathForSelectedRow()!.row].name
+            //newViewController.name = self.contacts[tableView.indexPathForSelectedRow()!.row].name
+            
+            
+            let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)!
+            let contact = self.contacts[indexPath.row]
+            var destination = segue.destinationViewController as! ViewController
+            destination.contact = contact
             
         }
     }

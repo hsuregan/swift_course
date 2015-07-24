@@ -10,8 +10,8 @@ import Foundation
 
 class Contact {
     
-    let name: String
-    let phoneNumber: String
+    var name: String?
+    var phoneNumber: String?
     
     init(name: String, phoneNumber: String) {
         self.name = name;

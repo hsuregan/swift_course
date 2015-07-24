@@ -74,8 +74,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="nameLabel" destination="J6U-AW-gNS" id="1Bn-ry-G2R"/>
-                        <outlet property="phoneNumberLabel" destination="XIJ-bn-RUR" id="azr-bA-aha"/>
+                        <outlet property="nameField" destination="J6U-AW-gNS" id="Y38-6S-D2d"/>
+                        <outlet property="phoneNumberField" destination="XIJ-bn-RUR" id="lYu-fR-RNn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMm-yt-OWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,12 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var nameLabel: UITextField!
-    @IBOutlet var phoneNumberLabel: UITextField!
+    @IBOutlet var nameField: UITextField!
+    @IBOutlet var phoneNumberField: UITextField!
     
+    var contact:Contact?
     
-    var name:String?
-    var phoneNumber:String?
     
 
     
@@ -23,31 +22,41 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         NSLog("TEXTFIELDIDEDITING")
-        if textField == self.nameLabel {
-            self.name? = textField.text
-            NSLog(self.name!);
-        } else if textField == self.phoneNumberLabel {
-            self.phoneNumber? = textField.text
+        if textField == self.nameField {
+            //NSLog(self.name!);
+            self.contact?.name = textField.text
+        } else if textField == self.phoneNumberField {
+            self.contact?.phoneNumber = textField.text
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.phoneNumberLabel.text = self.phoneNumber;
-        //self.nameLabel.text = self.name;
-        self.nameLabel.delegate = self
-        self.phoneNumberLabel.delegate = self
+        //self.phoneNumberField.text = self.phoneNumber;
+        //self.nameField.text = self.name;
+        self.nameField.delegate = self
+        self.phoneNumberField.delegate = self
         //self.view.backgroundColor = UIColor.redColor()
-        
-        if let name = self.name {
-            self.nameLabel.text = name
-        }
-        if let phoneNumber = self.phoneNumber {
-            self.phoneNumberLabel.text = phoneNumber
-        }
-        
+       
+//        NSLog("viewDidLoad")
+//
+//        self.nameField.text = self.contact?.name;
+//        self.phoneNumberField.text = self.contact?.phoneNumber;
+//        NSLog("viewDidLoad")
 
-        NSLog("viewDidLoad")
+        
+        if let contact = self.contact {
+            if let name = contact.name{
+                self.nameField.text = name
+                NSLog("UGH!")
+            }
+    
+            
+            if let phoneNumber = contact.phoneNumber {
+                self.phoneNumberField.text = phoneNumber
+            }
+        }
+
 
         // Do any additional setup after loading the view, typically from a nib.
     }
