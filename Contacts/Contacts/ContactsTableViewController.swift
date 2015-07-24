@@ -17,8 +17,8 @@ class ContactsTableViewController: UITableViewController {
     }
     
     func addContact() {
-        let contact:Contact = Contact(name: "New Contact", phoneNumber: "")
-        self.contacts.append(contact)
+        let newContact:Contact = Contact(name: "New Contact", phoneNumber: "")
+        self.contacts.extend([newContact])
         let newIndexPath = NSIndexPath(forRow: self.contacts.count - 1, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Automatic)
     }
@@ -32,12 +32,11 @@ class ContactsTableViewController: UITableViewController {
         self.contacts.extend([regan, christine, mom])
         
         let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
-        navigationItem.leftBarButtonItem = moveButton
+        
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addContact"))
-        navigationItem.rightBarButtonItem = addButton
-        
-        
+        navigationItem.leftBarButtonItem = addButton
+
         
 
 
