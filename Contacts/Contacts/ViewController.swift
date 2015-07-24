@@ -8,20 +8,45 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet var nameLabel: UITextField!
+    @IBOutlet var phoneNumberLabel: UITextField!
     
     
-    var name:String!
-    var phoneNumber:String!
+    var name:String?
+    var phoneNumber:String?
+    
+
+    
+    //textField is a data Type UITextField 
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField == self.nameLabel {
+            self.name? = textField.text
+            NSLog(self.name!);
+        } else if textField == self.phoneNumberLabel {
+            self.phoneNumber? = textField.text
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
-        phoneNumberLabel.text = phoneNumber;
-        nameLabel.text = name;
+        //self.view.backgroundColor = UIColor.redColor()
+        
+        if let name = self.name {
+            self.nameLabel.text = name
+        }
+        if let phoneNumber = self.phoneNumber {
+            self.phoneNumberLabel.text = phoneNumber
+        }
+        
+        //self.phoneNumberLabel.text = self.phoneNumber;
+        //self.nameLabel.text = self.name;
+        self.nameLabel.delegate = self
+        self.phoneNumberLabel.delegate = self
+        NSLog("viewDidLoad")
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -30,6 +55,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     
 
 

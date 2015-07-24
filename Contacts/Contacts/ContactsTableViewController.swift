@@ -108,7 +108,7 @@ class ContactsTableViewController: UITableViewController {
     
     
 
-    
+    //UITableViewCellEditingStyle .Delete
     // Override to support editing the table view.
     //whats going on over here?
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -160,5 +160,11 @@ class ContactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(animated: Bool) {
+        NSLog("ugh")
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
 }
