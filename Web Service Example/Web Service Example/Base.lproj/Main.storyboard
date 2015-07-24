@@ -31,6 +31,9 @@
                             <constraint firstAttribute="centerY" secondItem="tfT-Px-QzQ" secondAttribute="centerY" id="qff-qx-GSL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myNameLabel" destination="tfT-Px-QzQ" id="Do2-Mm-WF2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
