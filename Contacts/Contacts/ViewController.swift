@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         //self.phoneNumberField.text = self.phoneNumber;
         //self.nameField.text = self.name;
-        self.nameField.delegate = self
-        self.phoneNumberField.delegate = self
+        //self.nameField.delegate = self
+        //self.phoneNumberField.delegate = self
         //self.view.backgroundColor = UIColor.redColor()
        
 //        NSLog("viewDidLoad")

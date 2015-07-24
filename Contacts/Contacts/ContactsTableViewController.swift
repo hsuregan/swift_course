@@ -10,20 +10,17 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
-
-    
     var contacts:[Contact]! = []
     
-    
-    
-    
-
-    //how do I append an object to this array?
     func toggleEdit() {
         tableView.setEditing(!tableView.editing, animated: true)
-        if(tableView.editing == true) {
-            
-        }
+    }
+    
+    func addContact() {
+        let contact:Contact = Contact(name: "New Contact", phoneNumber: "")
+        self.contacts.append(contact)
+        let newIndexPath = NSIndexPath(forRow: self.contacts.count - 1, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Automatic)
     }
     
 
@@ -36,6 +33,10 @@ class ContactsTableViewController: UITableViewController {
         
         let moveButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: Selector("toggleEdit"))
         navigationItem.leftBarButtonItem = moveButton
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("addContact"))
+        navigationItem.rightBarButtonItem = addButton
+        
         
         
 
