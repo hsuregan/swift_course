@@ -36,14 +36,34 @@ class ViewController: UIViewController {
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 
                 println("Response: " + responseObject.description)
-                
                 if let results = responseObject["results"] as? NSArray {
                     if let user = results[0] as? NSDictionary {
-                        if let cell = user["cell"] as? String {
-                            self.myNameLabel.text = cell
+                        if let user = user["user"] as? NSDictionary {
+                            if let name = user["name"] as? NSDictionary {
+                                if let first = name["first"] as? String {
+                                    var fullName:String = first as String
+                                    if let second = name["last"] as? String {
+                                        fullName += " "
+                                        fullName += second
+                                        self.myNameLabel.text = fullName
+                                        self.myNameLabel.adjustsFontSizeToFitWidth = true
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            println(user)
+                            self.myNameLabel.text = "failed at cell"
+                            self.myNameLabel.adjustsFontSizeToFitWidth = true
                         }
                     }
+                    else {
+                        self.myNameLabel.text = "failed at user"
+                    }
                     //self.myNameLabel.text = nationality
+                }
+                else {
+                    self.myNameLabel.text = "failed at results"
                 }
                 activityIndicatorView.stopAnimating()
 //                let results = responseObject["results"]
