@@ -66,19 +66,6 @@ class ViewController: UIViewController {
                     self.myNameLabel.text = "failed at results"
                 }
                 activityIndicatorView.stopAnimating()
-//                let results = responseObject["results"]
-                
-//                if let jsonResult = responseObject as? Dictionary<String, AnyObject> {
-//                    // do whatever with jsonResult
-//                    myNameLabel.text = jsonResult["user"]["cell"]
-//                }
-
-//                for(index:String, subJson: JSON) in results {
-//                    let user: AnyObject = subJson["user"].object
-//                    if let phoneNumber = user["cell"] as? string {
-//                        myNameLabel.text = phoneNumber
-//                    }
-//                }
  
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in

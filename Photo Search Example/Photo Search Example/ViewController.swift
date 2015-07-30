@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myName: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +20,19 @@ class ViewController: UIViewController {
         manager.GET( "https://api.instagram.com/v1/tags/clararockmore/media/recent?client_id=48133bfc6c8f46dd908b6afed6e98648",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
+                //println("JSON: " + responseObject.description)
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                //println("Error: " + error.localizedDescription)
         })
+        
         var params = [
-            "title":"helloIphone"
+            "title":"Christine"
+        ]
+        
+        var ugh = [
+            "_id": "55baaf8757143054aee182a7"
+
         ]
         
         //post to your node server
@@ -36,6 +43,25 @@ class ViewController: UIViewController {
             }) { (AFHTTPRequestOperation, NSError) -> Void in
                 println("fail")
         }
+        
+        manager.GET( "http://localhost:3000/items/person/macaroni",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("JSON: " + responseObject.description)
+                if let results = responseObject[0] as? NSDictionary {
+                    if let title = results["title"] as? String {
+                        self.myName.text = title as String
+                        self.myName.adjustsFontSizeToFitWidth = true
+
+                    }
+                }
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
