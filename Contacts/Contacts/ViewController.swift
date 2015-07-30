@@ -9,7 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-    
+    //2nd makes viewcontroller a delegate for the text field
+    /*
+    there are also ones for table view delegate
+    another is spinner for date
+    */
     @IBOutlet var nameField: UITextField!
     @IBOutlet var phoneNumberField: UITextField!
     
@@ -20,6 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //textField is a data Type UITextField 
     
+    //protocol func 
     func textFieldDidEndEditing(textField: UITextField) {
         NSLog("TEXTFIELDIDEDITING")
         if textField == self.nameField {
@@ -34,8 +39,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         //self.phoneNumberField.text = self.phoneNumber;
         //self.nameField.text = self.name;
+        
+        /*
+        most things have UI elements that are more complex that are just output have delegate
+        some customization you as the programmer wanna specify
+        ex.
+        text input field
+        you press return, that needs to trigger some event in your app
+        that textfield has a prop called a delegate
+            you set that to some other class
+        whatever you set it to needs to implement the delegate
+        
+        */
         self.nameField.delegate = self
         self.phoneNumberField.delegate = self
+        
         //self.view.backgroundColor = UIColor.redColor()
        
 //        NSLog("viewDidLoad")

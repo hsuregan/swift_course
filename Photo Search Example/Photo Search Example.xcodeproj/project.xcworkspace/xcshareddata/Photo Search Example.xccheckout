@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>0199AECD-A5CA-4687-908D-1F736329247E</string>
+	<string>483B5D3E-3A29-468F-B84E-BF523C8E3592</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Contacts</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
 		<string>https://github.com/hsuregan/swift_course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Contacts/Contacts.xcodeproj</string>
+	<string>Photo Search Example/Photo Search Example.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7FA5D70152B5762101D004D8665918CCDCECEEC8</key>
