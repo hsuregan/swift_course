@@ -100,7 +100,7 @@ class Circle: Shape {
 var circle:Circle = Circle(radius: 50, color: UIColor.redColor());
 var square:Square = Square(width: 50, color: UIColor.blueColor());
 var rectangle:Rectangle = Rectangle(width: 150, height: 100, color: UIColor.yellowColor())
-var rr:RoundRectangle = RoundRectangle(width: 100, height: 30, color: UIColor.lightGrayColor(), corner_rad: 10)
+var rr:RoundRectangle = RoundRectangle(width: 100, height: 30, color: UIColor.yellowColor(), corner_rad: 10)
 
 //position shapes
 circle.center = CGPoint(x: 100, y:100)
@@ -112,9 +112,9 @@ rr.center = CGPoint(x: 100, y: 100)
 let view = UIView(frame: CGRect(x:0, y:0, width: 320, height: 320))
 XCPShowView("Shapes!", view)
 
-//view.addSubview(circle)
+view.addSubview(circle)
 //view.addSubview(square)
-//view.addSubview(rectangle)
+view.addSubview(rectangle)
 view.addSubview(rr)
 
 
