@@ -13,6 +13,11 @@
 		735A68F31B7A9F3100826AB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735A68F21B7A9F3100826AB9 /* Images.xcassets */; };
 		735A68F61B7A9F3100826AB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735A68F41B7A9F3100826AB9 /* LaunchScreen.xib */; };
 		735A69021B7A9F3100826AB9 /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A69011B7A9F3100826AB9 /* MusicAppTests.swift */; };
+		73EA70B31B9117870081ACB8 /* Submarine.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 73EA70B21B9117870081ACB8 /* Submarine.aiff */; };
+		73EA70B61B911D010081ACB8 /* FDWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EA70B51B911D010081ACB8 /* FDWaveformView.m */; };
+		73EC0C131B85253000026A4C /* IntensityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EC0C121B85253000026A4C /* IntensityIndicator.swift */; };
+		73EC0C151B85524B00026A4C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EC0C141B85524B00026A4C /* Shape.swift */; };
+		73EC0C191B868B4D00026A4C /* 05 The River.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73EC0C181B868B4D00026A4C /* 05 The River.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,13 @@
 		735A68FB1B7A9F3100826AB9 /* MusicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		735A69001B7A9F3100826AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735A69011B7A9F3100826AB9 /* MusicAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppTests.swift; sourceTree = "<group>"; };
+		73EA70AE1B9117560081ACB8 /* MusicApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		73EA70B21B9117870081ACB8 /* Submarine.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Submarine.aiff; path = ../Submarine.aiff; sourceTree = "<group>"; };
+		73EA70B51B911D010081ACB8 /* FDWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWaveformView.m; sourceTree = "<group>"; };
+		73EA70B71B911D600081ACB8 /* FDWaveformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDWaveformView.h; sourceTree = "<group>"; };
+		73EC0C121B85253000026A4C /* IntensityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntensityIndicator.swift; path = Models/IntensityIndicator.swift; sourceTree = "<group>"; };
+		73EC0C141B85524B00026A4C /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = Models/Shape.swift; sourceTree = "<group>"; };
+		73EC0C181B868B4D00026A4C /* 05 The River.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05 The River.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +89,16 @@
 		735A68E81B7A9F3100826AB9 /* MusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				73EA70B21B9117870081ACB8 /* Submarine.aiff */,
+				73EA70AE1B9117560081ACB8 /* MusicApp-Bridging-Header.h */,
 				735A68EB1B7A9F3100826AB9 /* AppDelegate.swift */,
+				73EA70B71B911D600081ACB8 /* FDWaveformView.h */,
+				73EA70B51B911D010081ACB8 /* FDWaveformView.m */,
 				735A68ED1B7A9F3100826AB9 /* ViewController.swift */,
+				73EC0C181B868B4D00026A4C /* 05 The River.mp3 */,
+				73EC0C121B85253000026A4C /* IntensityIndicator.swift */,
 				735A68EF1B7A9F3100826AB9 /* Main.storyboard */,
+				73EC0C141B85524B00026A4C /* Shape.swift */,
 				735A68F21B7A9F3100826AB9 /* Images.xcassets */,
 				735A68F41B7A9F3100826AB9 /* LaunchScreen.xib */,
 				735A68E91B7A9F3100826AB9 /* Supporting Files */,
@@ -192,6 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73EA70B31B9117870081ACB8 /* Submarine.aiff in Resources */,
+				73EC0C191B868B4D00026A4C /* 05 The River.mp3 in Resources */,
 				735A68F11B7A9F3100826AB9 /* Main.storyboard in Resources */,
 				735A68F61B7A9F3100826AB9 /* LaunchScreen.xib in Resources */,
 				735A68F31B7A9F3100826AB9 /* Images.xcassets in Resources */,
@@ -213,7 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				735A68EE1B7A9F3100826AB9 /* ViewController.swift in Sources */,
+				73EC0C131B85253000026A4C /* IntensityIndicator.swift in Sources */,
+				73EA70B61B911D010081ACB8 /* FDWaveformView.m in Sources */,
 				735A68EC1B7A9F3100826AB9 /* AppDelegate.swift in Sources */,
+				73EC0C151B85524B00026A4C /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +364,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -351,9 +378,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -411,6 +440,7 @@
 				735A69071B7A9F3100826AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		735A69081B7A9F3100826AB9 /* Build configuration list for PBXNativeTarget "MusicAppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +449,7 @@
 				735A690A1B7A9F3100826AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
